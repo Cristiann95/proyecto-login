@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validatePassword() {
         const passwordValue = passwordInput.value.trim();
-        const regexMayusculas = /[A-Z]\W/g;
+        const regexMayusculas = /[a-zA-Z]\w/g;
 
         if (!(passwordValue.length > 6 && passwordValue.match(regexMayusculas))) {
             showError(passwordError, "La contraseña debe tener al menos 6 caractéres, una mayúscula y un símbolo");
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function saveToLocalStorage() {
         const emailValue = emailInput.value.trim();
-        localStorage.setItem('email', emailValue);
+        localStorage.setItem('email', 'hola');
         const body = bodyBuilderJSON();
         console.log(body);
     }
